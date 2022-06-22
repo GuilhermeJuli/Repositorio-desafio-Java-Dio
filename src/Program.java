@@ -1,5 +1,14 @@
-public class Main {
+public class Program {
+
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        Conta cc = new ContaCorrente();
+        cc.depositar(100);
+        Conta poupanca = new ContaPoupanca();
+        cc.transferir(100,poupanca);
+
+        cc.imprimirExtrato();
+        System.out.println();
+        poupanca.imprimirExtrato();
+
     }
 }
